@@ -30,10 +30,10 @@ body,html{
 .container {
     max-width: 1920px;
     margin: 0 auto; }
-
+/*inicio header y navbar*/
 header{
     background-color: transparent;
-    padding: 10px 30px;
+    padding: 10px 3em;
     margin-bottom: 10px; }
 nav {
     background: transparent;
@@ -54,8 +54,17 @@ a {
     font-weight: 700;
     font-size: 40px;
     order: 0;
-    align-self: center;
-    justify-self: flex-start;
+    position: relative;
+}
+.logo::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #eeeeee;
+    position: absolute;
+    left: 120%;
+    top: 50%;
 }
 a:hover {
     text-decoration: underline;
@@ -64,7 +73,7 @@ a:hover {
     text-decoration: none;
 }
 .nav-item {
-    font-size: 16px;
+    font-size: 22px;
     padding: 15px 5px;
     white-space: nowrap;
     display: block;
@@ -74,6 +83,11 @@ a:hover {
 .menu li{
     padding: 15px 10px;
 }
+.idiomas-container{
+    word-spacing: 20px;
+}
+/*fin header y navbar*/
+/*inicio hero-image*/
 .hero-image{
     position: relative;
     height: 530px;
@@ -120,6 +134,49 @@ h1{
 .btn:hover{
     opacity: 0.8;
 }
+/*fin hero-image*/
+main{
+    background-image: url(fondo-tripba1.svg);
+}
+/*inicio about section*/
+.sectionContainer{
+    height: 200px;
+    padding: 1em 4em;
+}
+.sectionTitle{
+    color: #73001a;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: left; 
+    /*border-top: 1px solid #73001a;*/
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1.2px solid #73001a;
+}
+.sectionContent{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    padding: 1.5em 0;
+}
+.sectionContent p{
+    color: #eeeeee;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: justify;
+    margin-left: 2em;
+    word-break: break-all;
+    padding-top: 0.5em;
+}
+.sectionContent i{
+    font-size: 120px;
+    padding-top: 0.7em;
+    padding-left: 0.4em;
+    text-align: center;
+    color: #b6a74c;
+}
+
 
 
 
