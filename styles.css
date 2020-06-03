@@ -10,29 +10,116 @@
 .link-quizas{
     background-color: #01334c;
 }*/
-
-* {
-    margin: 0;
-    padding: 0; }
-  
-body{
-    background-color: #010e15;
-    color: #eeeeee;
-    /*font-family: 'Montserrat', sans-serif;
+/*font-family: 'Montserrat', sans-serif;
     font-family: 'Lato', sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    background-color: #010e15;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Inria Sans', sans-serif;
     position: relative; }
   
 .container {
-    max-width: 1200px; }
+    max-width: 1200px;
+    margin: 0 auto; }
 
-.header{
+header{
     background-color: transparent;
+    padding: 10px 10px;
+    margin-bottom: 10px; }
+nav {
+    background: transparent;
+    
+}
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+a {
     color: #eeeeee;
+    text-decoration: none;
 }
-h2{
+.logo{
     font-weight: 700;
-    font-size: 30px;
+    font-size: 40px;
+    order: 0;
+    align-self: center;
+    justify-self: flex-start;
 }
+a:hover {
+    text-decoration: underline;
+}
+.logo a:hover {
+    text-decoration: none;
+}
+.nav-item {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+    display: block;
+    width: auto;
+    order: 1;
+}
+.menu li{
+    padding: 15px 10px;
+}
+.hero-image{
+    position: relative;
+    height: 530px;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #eeeeee;
+    font-weight: 700;
+}
+h1{
+    font-size: 90px;
+    letter-spacing: 0.1em;
+    border: 6px solid #eeeeee;
+    padding: 5px 12px;
+}
+.hero-container h1 span{
+    display: inline-block;
+}
+.subtitulo{
+    margin: 25px;
+    display: block;
+    font-size: 26px;
+    text-shadow: 0 0 10px black;
+    text-transform: uppercase;
+}
+.btn{
+    background: #b6a74c;
+    color: #010e15;
+    padding: 10px 24px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s all;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+
 
 
