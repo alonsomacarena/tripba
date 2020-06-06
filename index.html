@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   
-  <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">-->
   <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   
@@ -29,7 +27,7 @@
           <li class="nav-item"><a href="#about">About</a></li>
           <li class="nav-item"><a href="#tours">Tours</a></li>
           <li class="nav-item"><a href="#contacto">Contacto</a></li>
-          <li class="nav-item"><i><a href="#booking" class="fas fa-shopping-cart"></a></i></li>
+          <li class="nav-item"><i><a href="#shoppingCart" class="fas fa-shopping-cart"></a></i></li>
        </ul>
       </nav>
     </header>
@@ -37,33 +35,122 @@
     <div class="hero-image">
       <div class="hero-container">
         <h1>TripBA</h1>
-        <span class="subtitulo">Explora los lugares más emblemáticos de Buenos Aires de noche</span>
+        <span class="subtitulo">Explora los lugares más emblemáticos de Buenos Aires</span>
         <a class="btn" href="#tours">Conoce nuestros Tours!</a>
       </div>
     </div>
 
   <main>
-    <!--about section-->
-    <div id="about" class="sectionContainer" >
-    <h2 class="sectionTitle">Sobre Nosotros</h2>
-    <div class="sectionContent">
-      <img src="image-about.jpg">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Recusandae aliquid a expedita culpa suscipit voluptate nam magnam ea repudiandae totam molestias minus 
-        eaque libero, ratione dolores? Illum neque voluptatibus expedita?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Recusandae aliquid a expedita culpa suscipit voluptate nam magnam ea repudiandae totam molestias minus 
-        eaque libero, ratione dolores? Illum neque voluptatibus expedita?</br>
-        <i class="far fa-building"></i>
-        <i class="far fa-compass"></i></p>
-    </div>
-  </div>
     <!--tours section-->
-    <!--gallery section-->
-    <!--contact section / footer?-->  
+      <h2 class="sectionTitle" id="tours">Nuestros Tours</h2>
 
+      <div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="Buscar">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+     </div>
 
-  </main>
+      <article class="tourCards-1">
+          <h4 class="tourTitle">Tour Name</h4>
+          <div class="imageTour"></div>
+          <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
+          <p class="duration">X horas</p>
+          <p class="timeAvailable">De 00hrs a 00hrs</p>
+          <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
+          <p class="idTour">#0000</p> 
+          <div class="btnTour">
+            <a class="btnDetalle" href="#detalle">Ver Detalle</a>
+            <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
+        </div>
+      </article>
+
+      <article class="tourCards-2">
+        <h4 class="tourTitle">Tour Name</h4>
+        <div class="imageTour"></div>
+        <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
+        <p class="duration">X horas</p>
+        <p class="timeAvailable">De 00hrs a 00hrs</p>
+        <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
+        <p class="idTour">#0000</p> 
+        <div class="btnTour">
+          <a class="btnDetalle" href="#detalle">Ver Detalle</a>
+          <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
+      </div>
+    </article>
+
+    <article class="tourCards-3">
+      <h4 class="tourTitle">Tour Name</h4>
+      <div class="imageTour"></div>
+      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
+      <p class="duration">X horas</p>
+      <p class="timeAvailable">De 00hrs a 00hrs</p>
+      <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
+      <p class="idTour">#0000</p> 
+      <div class="btnTour">
+        <a class="btnDetalle" href="#detalle">Ver Detalle</a>
+        <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
+    </div>
+    </article>
+
+    <article class="tourCards-4">
+      <h4 class="tourTitle">Tour Name</h4>
+      <div class="imageTour"></div>
+      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
+      <p class="duration">X horas</p>
+      <p class="timeAvailable">De 00hrs a 00hrs</p>
+      <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
+      <p class="idTour">#0000</p> 
+      <div class="btnTour">
+        <a class="btnDetalle" href="#detalle">Ver Detalle</a>
+        <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
+    </div>
+    </article>
+
+    <article class="tourCards-5">
+      <h4 class="tourTitle">Tour Name</h4>
+      <div class="imageTour"></div>
+      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
+      <p class="duration">X horas</p>
+      <p class="timeAvailable">De 00hrs a 00hrs</p>
+      <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
+      <p class="idTour">#0000</p> 
+      <div class="btnTour">
+        <a class="btnDetalle" href="#detalle">Ver Detalle</a>
+        <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
+    </div>
+    </article>
+
+    <article class="tourCards-6">
+      <h4 class="tourTitle">Tour Name</h4>
+      <div class="imageTour"></div>
+      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
+      <p class="duration">X horas</p>
+      <p class="timeAvailable">De 00hrs a 00hrs</p>
+      <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
+      <p class="idTour">#0000</p> 
+      <div class="btnTour">
+        <a class="btnDetalle" href="#detalle">Ver Detalle</a>
+        <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
+    </div>
+    </article>
+
+  </main>    
+    <!--footer-->
+    <footer>
+      <ul class="footer">
+        <h3 class="logoFooter"><a href="index.html">TripBA</a></h3>
+        <div class="redes">
+        <i><a class="fab fa-facebook-f" href="#" target="_blank"></a></i>
+        <i><a class="fab fa-instagram" href="#" target="_blank"></a></i>
+        <i><a class="fab fa-twitter" href="#" target="_blank"></a></i>
+      </div>
+     </ul>		
+  </footer>  
+  
+
   </div>
 
 
