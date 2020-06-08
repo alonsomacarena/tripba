@@ -177,7 +177,7 @@ article{
     padding: 1em 1.5em;
     box-sizing: border-box;
     height: 530px;
-    background-color: rgba(238, 238, 238,0.9);
+    background-color:#eeeeee;
     border-radius: 8px;
 }
 .tourTitle{
