@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--fonts and icons-->
   <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  
+  <!--css-->
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <!--js-->
+  <script src="data.js"></script>
+  <script src="products.js"></script>
+  <script src="shoppingCart.js"></script>
+  <script defer src="app.js"></script>
 
   <title>TripBA Coderhouse</title>
 </head>
@@ -15,7 +21,7 @@
  
   <div class="container">
     <!--header + navbar-->
-    <header>
+    <header id="header">
       <nav>
         <ul class="menu">
           <h3 class="logo"><a href="index.html">TripBA</a></h3>
@@ -27,10 +33,11 @@
           <li class="nav-item"><a href="#about">About</a></li>
           <li class="nav-item"><a href="#tours">Tours</a></li>
           <li class="nav-item"><a href="#contacto">Contacto</a></li>
-          <li class="nav-item"><i><a href="#shoppingCart" class="fas fa-shopping-cart"></a></i></li>
+          <li class="nav-item"><i><a href="#cart-container" class="fas fa-shopping-cart"></a></i></li>
        </ul>
       </nav>
     </header>
+
     <!--hero image-->
     <div class="hero-image">
       <div class="hero-container">
@@ -44,98 +51,39 @@
     <!--tours section-->
       <h2 class="sectionTitle" id="tours">Nuestros Tours</h2>
 
-      <div class="wrap">
-        <div class="search">
-           <input type="text" class="searchTerm" placeholder="Buscar">
-           <button type="submit" class="searchButton">
-             <i class="fa fa-search"></i>
-          </button>
+    
+      <section class="search-box">
+        <form id="form-search">
+            <div class="search">
+                    <input type="text" id="search-box-input" value="" />
+                    <input id="search-button" type="button" value="Buscar" />
+                    <input id="cancel-button" type="button" value="Cancelar" />
+            </div>
+        </form>
+    </section>
+      
+      <section class="search-text-container">
+        <div id="search-resume">
+        <p class="search-text" >
+          <span id="search-result-length"></span>
+           resultados para la busqueda  
+          <span id="search-key"></span>
+        </p>
         </div>
-     </div>
+      </section>
 
-      <article class="tourCards-1">
-          <h4 class="tourTitle">Tour Name</h4>
-          <div class="imageTour"></div>
-          <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
-          <p class="duration">X horas</p>
-          <p class="timeAvailable">De 00hrs a 00hrs</p>
-          <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
-          <p class="idTour">#0000</p> 
-          <div class="btnTour">
-            <a class="btnDetalle" href="#detalle">Ver Detalle</a>
-            <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
-        </div>
-      </article>
-
-      <article class="tourCards-2">
-        <h4 class="tourTitle">Tour Name</h4>
-        <div class="imageTour"></div>
-        <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
-        <p class="duration">X horas</p>
-        <p class="timeAvailable">De 00hrs a 00hrs</p>
-        <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
-        <p class="idTour">#0000</p> 
-        <div class="btnTour">
-          <a class="btnDetalle" href="#detalle">Ver Detalle</a>
-          <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
-      </div>
-    </article>
-
-    <article class="tourCards-3">
-      <h4 class="tourTitle">Tour Name</h4>
-      <div class="imageTour"></div>
-      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
-      <p class="duration">X horas</p>
-      <p class="timeAvailable">De 00hrs a 00hrs</p>
-      <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
-      <p class="idTour">#0000</p> 
-      <div class="btnTour">
-        <a class="btnDetalle" href="#detalle">Ver Detalle</a>
-        <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
-    </div>
-    </article>
-
-    <article class="tourCards-4">
-      <h4 class="tourTitle">Tour Name</h4>
-      <div class="imageTour"></div>
-      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
-      <p class="duration">X horas</p>
-      <p class="timeAvailable">De 00hrs a 00hrs</p>
-      <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
-      <p class="idTour">#0000</p> 
-      <div class="btnTour">
-        <a class="btnDetalle" href="#detalle">Ver Detalle</a>
-        <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
-    </div>
-    </article>
-
-    <article class="tourCards-5">
-      <h4 class="tourTitle">Tour Name</h4>
-      <div class="imageTour"></div>
-      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
-      <p class="duration">X horas</p>
-      <p class="timeAvailable">De 00hrs a 00hrs</p>
-      <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
-      <p class="idTour">#0000</p> 
-      <div class="btnTour">
-        <a class="btnDetalle" href="#detalle">Ver Detalle</a>
-        <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
-    </div>
-    </article>
-
-    <article class="tourCards-6">
-      <h4 class="tourTitle">Tour Name</h4>
-      <div class="imageTour"></div>
-      <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam aliquid</p>
-      <p class="duration">X horas</p>
-      <p class="timeAvailable">De 00hrs a 00hrs</p>
-      <p class="price">USD 10 / REAL 10 / EURO 10 / PESOS 10</p>
-      <p class="idTour">#0000</p> 
-      <div class="btnTour">
-        <a class="btnDetalle" href="#detalle">Ver Detalle</a>
-        <a class="btnShoppingCart" href="#shoppingCart">Agregar al carrito</a>
-    </div>
-    </article>
+      <div id="products-container">
+      <!-- Cards Tours que se cargan desde JS -->
+      </div> 
+      <div id="cart-container">
+        <!--cart slide in side que se carga desde js-->
+       </div> 
+      
+      <!--icono flecha scroll up-->
+	<div class="flecha-container">
+			<i class="flecha-i"><a class="fas fa-arrow-circle-up flecha-i" href="#header"></a></i>
+	</div>
+	<!--icono flecha scroll up--> 
 
   </main>    
     <!--footer-->

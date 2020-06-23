@@ -121,11 +121,12 @@ h1{
 main{
     display: grid;
     grid-template-columns: repeat(3, 4fr);
-    grid-template-rows: 0.25fr 0.15fr 1fr 1fr;
-    grid-gap: 25px;
+    grid-template-rows: 0.25fr 0.15fr 1fr 1fr 1fr;
+    grid-row-gap: 25px;
+    grid-column-gap: 5px;
 }
 /*inicio search bar*/
- .wrap{
+ .search-box{
     grid-column: 1 / span 3;
     grid-row: 2;
     margin: 0 15em 0em 15em;
@@ -135,7 +136,7 @@ main{
     position: relative;
     display: flex;
   } 
-  .searchTerm {
+  #search-box-input{
     width: 100%;
     border: 3px solid #b6a74c;
     border-right: none;
@@ -145,21 +146,54 @@ main{
     outline: none;
     color: #010e15;
   }
-  .searchTerm:focus{
-    color: #010e15;
-  }
-  .searchButton {
-    width: 40px;
+  #search-button{
+    width: 7em;
     height: 36px;
     border: 1px solid #b6a74c;
     background: #b6a74c;
     text-align: center;
     color: #eeeeee;
-    border-radius: 0 8px 8px 0;
+    font-weight: 700;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
+    padding: 0.4em;
+    box-sizing: border-box;
+    box-shadow:0px 2px 6px 0 rgba(0,0,0,0.2);
+  }
+  #cancel-button{
+    width: 7em;
+    height: 36px;
+    background: #010e15;
+    text-align: center;
+    color: #eeeeee;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 0.4em;
+    box-sizing: border-box;
+    border: 0.5px solid #011e16;
+    box-shadow:0px 2px 6px 0 rgba(0,0,0,0.2);
   } 
 /*fin search bar*/
+/*inicio section resultados busqueda*/
+.search-text-container{
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    margin: 4em 10em 0em 0em;
+}
+.search-text{
+    color: #eeeeee;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+#search-result-length, #search-key{
+    color: #b6a74c;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+/*fin section resultados busqueda*/
 .sectionTitle{
     grid-column: 1 / span 3;
     grid-row: 1;
@@ -172,11 +206,21 @@ main{
     border-bottom: 1.2px solid #eeeeee;
 }
 /*Tour Section*/
-article{
-    margin: 0 3em 1em 3em;
+#products-container{
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 5;
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 25px;
+}
+.tourCards{
+    margin: 0 0 1em 3em;
     padding: 1em 1.5em;
     box-sizing: border-box;
     height: 530px;
+    width:355px ;
     background-color:#eeeeee;
     border-radius: 8px;
 }
@@ -191,82 +235,65 @@ article{
 .imageTour{
     width: 100%;
     height: 50%;
-    background:gray;
+}
+.description-price-container{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    margin-top: 0.5em;
 }
 .description{
     color: #010e15;
     font-size: 16px;
     font-weight: 400;
     font-style: italic;
-    text-align: justify;
-    word-break: break-all;
-    padding-top: 10px;
+    text-align: left;
+    width: 80%;
 }
-p {
-    color: #73001a;
+.duration, .horarios-title{
+    color: #010e15;
     font-size: 15px;
     font-weight: 700;
-    text-align: justify;
-    word-break: break-all;
-    padding-top: 5px;
+    text-align: center;
+    margin-top: 0.4em;
 }
-.btnTour{
+.horarios-title{
+    margin-top: 0.5em;
+}
+.price{
+    color: #73001a;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 0.5em;
+        
+}
+.container-btnTour{
     padding-top: 15px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: center;
 }
 .btnDetalle{
     background: #010e15;
     color: #eeeeee;
-    
-    padding: 8px 10px;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s all;
-}
-.btnDetalle:hover {
-    opacity: 0.8;
 }
 .btnShoppingCart{
     background: #b6a74c;
     color: #010e15;
-    padding: 8px 10px;
-    font-size: 16px;
+}
+.btnDetalle, .btnShoppingCart{
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
     font-weight: 700;
     text-decoration: none;
     border-radius: 8px;
     transition: 0.3s all;
 }
-.btnShoppingCart:hover {
+.btnDetalle:hover, .btnShoppingCart:hover{
     opacity: 0.8;
-}
-.tourCards-1{
-    grid-column: 1;
-    grid-row: 3;
-}
-.tourCards-2{
-    grid-column: 2;
-    grid-row: 3;
-}
-.tourCards-3{
-    grid-column: 3;
-    grid-row: 3;
-}
-.tourCards-4{
-    grid-column: 1;
-    grid-row: 4;
-}
-.tourCards-5{
-    grid-column: 2;
-    grid-row: 4;
-}
-.tourCards-6{
-    grid-column: 3;
-    grid-row: 4;
 }
 /*fin tours*/
 /*inicio footer*/
@@ -300,5 +327,137 @@ footer{
     order: 0;
     position: relative;
 }
-
 /*fin footer*/
+/*inicio shoppingCart*/
+#cart-container{
+    grid-column: 3;
+    grid-row: 3 / span 5;  
+}
+.cart{
+    border: 5px solid #eeeeee;
+    border-radius: 8px;
+    margin: 0 0 1em 2em;
+    padding: 1em 1.5em;
+    box-sizing: border-box;
+    width:355px ;
+}
+#title-lenght, #cart-lenght{
+    color: #eeeeee;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.5em;
+    margin-top: 3em;
+    text-transform: uppercase;
+}
+#subtotal, #subtotal-span{
+    color: #eeeeee;
+    font-size: 23px;
+    font-weight: 400;
+    text-align: left;
+    padding-bottom: 0.5em;
+    margin-top: 3em;
+    text-transform: uppercase;
+}
+.remove{
+    color: #eeeeee;
+    font-size: 25px;
+    font-weight: 400;
+    float: right;
+    text-align: center;
+    padding: 0.2em 0.5em;
+    text-transform: uppercase;
+    width: 40px;
+    border-radius: 8px;
+    border: 1px solid #eeeeee;
+    background-color: #73001a;
+}
+.cart-list{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.container-list-cart{
+    border: 1px solid #eeeeee;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding:0.5em;
+}
+.list-cart{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    color: #eeeeee;
+    font-size: 15px;
+    padding: 5px 3px;
+}
+.title-cart{
+    color: #eeeeee;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.price-cart{
+    color: #b6a74c;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+    padding-top: 0.2em;        
+}
+.btnCart{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: flex-end;
+    margin-bottom: 1em;
+}
+.btnCancel, .btnShop{
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s all;
+    border: none;
+}
+.btnCancel{
+    background: #73001a;
+    color: #eeeeee;
+}
+.btnShop{
+    background: #b6a74c;
+    color: #010e15;
+}
+.btnCancel:hover,.btnShop:hover {
+    opacity: 0.8;
+}
+/*fin shoppingCart*/
+/*inicio icono flecha scroll up*/
+.flecha-container{
+    grid-column: 3;
+    grid-row: 5;
+    justify-self: center;
+    align-self: flex-end;
+}
+.flecha-i {
+    color: #b6a74c;
+    font-size: 1.8em;
+    border-style: none;
+    position: absolute;
+}
+  
+.flecha-i i:hover {
+    color: #5d5b6a;
+    text-decoration: none;}
+  
+#horarios-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    padding-top: 0.5em;
+    width: 100%;
+}
+.container-horarios{
+    padding-left: 0.5em;
+}
