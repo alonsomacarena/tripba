@@ -11,21 +11,21 @@ function addOrder(products, index) {
 	renderCart();
 };
 //funcion para renderizar el precio
-function renderPrice(total){
-		priceDisplay.html("$" + " " + total);
-		console.log(total);
+function renderPrice(total,priceDisplay){
+	priceDisplay= $(".price-display");
+	priceDisplay.html("$" + " " + total);
 };
 
 //funcion para calcular el total
-function calculateTotal(){
+function calculateTotal(products){
 	total=0;
 	order.forEach(function(product){
-		total += product.price;
+		total = total + product.price;
 	});
 	//me pasa el precio del producto
-	//console.log(total);
+	console.log(total);
 	//llamo a la funcion para renderizar el precio
-	renderPrice(total,priceDisplay);
+	renderPrice(total,".price-display");
 };	
 /*//funcion para renderizar dias
 function renderDays(days, products){
@@ -76,9 +76,8 @@ btnTrashIcon.click(function(){
 		$(event.target).parent().parent().parent().remove()
         order.splice(indice,1);
 		localStorage.setItem('order', JSON.stringify(order));
-		//aca me resta el primer elemento de la lista
+		//no me resta el precio del elemento que elimino. sino otro
 		calculateTotal();
-		//aca me resta el primer elemento de la lista
 		//calculateDays();
 	});
 //boton para cancelar compra-vaciar carrito y local storage
@@ -86,7 +85,7 @@ btnTrashIcon.click(function(){
 	btnCancel.click(function(){
 		order=[];
 		cartContainer.empty();
-		priceTotal.empty();
+		calculateTotal();
 		horarioCheck.empty();
 		localStorage.clear();
 	});
@@ -96,7 +95,6 @@ $(document).ready(function() {
     cartContainer = $("#cart-container");
     //faltaria ver cuando elijan divisa
 	horarioCheck=$("#horario-confirm");
-	priceDisplay=$(".price-display")
 	//boton para confirmar el pedido forma de pago y horario
 	btnConfirm = $("#btnConfirm");
 	btnConfirm.click(function() {
