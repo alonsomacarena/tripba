@@ -1,0 +1,60 @@
+[
+    {
+        "id": "RE4087",
+        "title": "Tour Recoleta",
+        "price": 80,
+        "img": "img/recoleta.jpg",
+        "description": "Cementerio de Recoleta + Avenida Alvear + Centro Cultural Recoleta ",
+        "duracion": "3HRS",
+        "day":"MARTES"
+    },
+    {
+        "id": "CA2286",
+        "title": "Tour Caminito",
+        "price": 90,
+        "img": "img/caminito.jpg",
+        "description": "Caminito + Estadio:La Bombonera + La Boca + Historia del Tango ",
+        "duracion": "3HRS",
+        "day":"MIERCOLES"
+    },
+    {
+        "id": "CE1023",
+        "title": "Tour Classics",
+        "price": 80,
+        "img": "img/centro.jpg",
+        "description": "Obelisco + Congreso de la Nación + Cabildo + Casa Rosada ",
+        "duracion": "3HRS",
+        "day":"JUEVES"
+    },
+    {
+        "id": "PM7730",
+        "title": "Tour Puerto Madero",
+        "price": 65,
+        "img": "img/puerto-madero.jpg",
+        "description": "Puente de la Mujer + Costanera Sur + Fragata Sarmiento",
+        "duracion": "3HRS",
+        "day":"VIERNES"
+    },
+    {
+        "id": "PA3896",
+        "title": "Tour Palermo",
+        "price": 80,
+        "img": "img/palermo.jpg",
+        "description": "Palermo Soho + Jardin Botánico + Rosedal + Planetario",
+        "duracion": "3HRS",
+        "day":"SABADO"
+    },
+    {
+        "id": "ST1055",
+        "title": "Tour San Telmo",
+        "price": 65,
+        "img": "img/san-telmo.jpg",
+        "description": "Mercado de San Telmo + Casa Mínima + Paseo de la Historieta",
+        "duracion": "3HRS",
+        "day":"DOMINGO"
+    }
+]
+
+
+
+

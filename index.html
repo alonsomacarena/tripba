@@ -7,10 +7,17 @@
   <!--fonts and icons-->
   <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <!--css-->
-  <link rel="stylesheet" type="text/css" href="styles.css">
+ <link rel="stylesheet" type="text/css" href="styles-bootstrap.css">
+  <!-- JS, Popper.js, and jQuery -->  
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+  <!--jquery slide in pluggin-->
   <!--js-->
-  <script src="data.js"></script>
   <script src="products.js"></script>
   <script src="shoppingCart.js"></script>
   <script defer src="app.js"></script>
@@ -19,52 +26,70 @@
 </head>
 <body>
  
-  <div class="container">
+  <div class="container-fluid">
     <!--header + navbar-->
     <header id="header">
-      <nav>
-        <ul class="menu">
-          <h3 class="logo"><a href="index.html">TripBA</a></h3>
-          <div class="idiomas-container">
-            <a href="#español" class="idioma">Esp</a>
-            <a href="#english" class="idioma">Eng</a>
-            <a href="#portugues" class="idioma">Por</a>
-          </div>
-          <li class="nav-item"><a href="#about">About</a></li>
-          <li class="nav-item"><a href="#tours">Tours</a></li>
-          <li class="nav-item"><a href="#contacto">Contacto</a></li>
-          <li class="nav-item"><i><a href="#cart-container" class="fas fa-shopping-cart"></a></i></li>
-       </ul>
-      </nav>
+      <nav class="navbar navbar-expand-lg col-sm-12">
+        <a class="navbar-brand col-sm-3" href="#">TripBA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav col-sm-12">
+            <div class="idiomas-container col-sm-2">
+              <a href="#español" class="idioma">Esp</a>
+              <a href="#english" class="idioma">Eng</a>
+              <a href="#portugues" class="idioma">Por</a>
+            </div>
+            <li class="nav-item col-sm-3">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item col-sm-2">
+              <a class="nav-link" href="#tours">Tours</a>
+            </li>
+            <li class="nav-item col-sm-3">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+            <li class="nav-item col-sm-2">
+              <i id="cd-cart-trigger"><a href="#9" class="fas fa-shopping-cart nav-link cd-img-replace"></a></i>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>     
     </header>
 
     <!--hero image-->
-    <div class="hero-image">
-      <div class="hero-container">
-        <h1>TripBA</h1>
-        <span class="subtitulo">Explora los lugares más emblemáticos de Buenos Aires</span>
-        <a class="btn" href="#tours">Conoce nuestros Tours!</a>
+    <section class="hero-image">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 hero-container">
+            <h1>TripBA</h1>
+            <span class="subtitulo">Explora los lugares más emblemáticos de Buenos Aires</span>
+            <a class="btn" href="#tours">Conoce nuestros Tours!</a>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-  <main>
+
+  <main class="main col-sm-12">
     <!--tours section-->
       <h2 class="sectionTitle" id="tours">Nuestros Tours</h2>
-
-    
-      <section class="search-box">
-        <form id="form-search">
-            <div class="search">
-                    <input type="text" id="search-box-input" value="" />
+    <!--buscador-->
+      <section class="search-box col-sm-12 ">
+        <form id="form-search" class="col-sm-12">
+            <div class="search col-sm-10">
+                    <input type="text" id="search-box-input" value="" class="col-sm-9"/>
                     <input id="search-button" type="button" value="Buscar" />
                     <input id="cancel-button" type="button" value="Cancelar" />
             </div>
         </form>
     </section>
-      
-      <section class="search-text-container">
-        <div id="search-resume">
-        <p class="search-text" >
+      <!--resultados busqueda-->
+      <section class="search-text-container col-sm-12">
+        <div id="search-resume" class="col-sm-10">
+        <p class="search-text col-sm-8" >
           <span id="search-result-length"></span>
            resultados para la busqueda  
           <span id="search-key"></span>
@@ -72,32 +97,55 @@
         </div>
       </section>
 
-      <div id="products-container">
+      <div id="products-container" class="col-sm-12">
       <!-- Cards Tours que se cargan desde JS -->
-      </div> 
-      <div id="cart-container">
-        <!--cart slide in side que se carga desde js-->
-       </div> 
-      
-      <!--icono flecha scroll up-->
-	<div class="flecha-container">
-			<i class="flecha-i"><a class="fas fa-arrow-circle-up flecha-i" href="#header"></a></i>
-	</div>
-	<!--icono flecha scroll up--> 
-
-  </main>    
-    <!--footer-->
-    <footer>
-      <ul class="footer">
-        <h3 class="logoFooter"><a href="index.html">TripBA</a></h3>
-        <div class="redes">
-        <i><a class="fab fa-facebook-f" href="#" target="_blank"></a></i>
-        <i><a class="fab fa-instagram" href="#" target="_blank"></a></i>
-        <i><a class="fab fa-twitter" href="#" target="_blank"></a></i>
       </div>
-     </ul>		
-  </footer>  
-  
+
+        <div id="cd-shadow-layer"></div>
+        <div id="cd-cart">
+          <h2>Cart</h2>
+          <div id="cart-container">
+          <ul class="cd-cart-items" id="order">            
+        </ul>
+         <!-- cd-cart-items -->
+      </div>
+          <div class="cd-cart-total">
+          <h2>Resumen</h2>
+          <fieldset>
+            <input type="radio" name="horario" value="9-12hrs" checked >9-12hrs
+            <input type="radio" name="horario" value="13-16hrs">13-16hrs
+            <input type="radio" name="horario" value="13-16hrs">13-16hrs
+            </fieldset>
+          <h3 class="horario-container">Horario:<span id="horario-confirm"></span></h3>
+          <h3 class="days-container">Dias:<span class="days-confirm"></span></h3>
+          <h5 class="price-container">Total: <span class="price-display"></span></h5>
+          </div> <!-- cd-cart-total -->
+          <a href="#0" class="checkout-btn" id="btnConfirm">Checkout</a>
+          <a href="#0" class="cancel-btn" id="btnCancel">Cancelar</a>
+        </div> <!-- cd-cart -->
+  </main>    
+
+  <!-- Footer -->
+<footer>
+      <!--<nav class="navbar navbar-expand-lg col-sm-12">
+       <a class="navbar-brand col-sm-2" href="#">TripBA</a>
+        <ul class="navbar-nav footer-list col-sm-2">
+          <li class="nav-item col-sm-6">
+            <i class="nav-icon" ><a class="fab fa-facebook-f nav-icon" href="#" target="_blank"></a></i>
+          </li>
+          <li class="nav-item col-sm-6">
+            <i class="nav-icon" ><a class="fab fa-instagram nav-icon" href="#" target="_blank"></a></i>
+          </li>
+            <li class="nav-item col-sm-6">
+            <i class="nav-icon" ><a class="fab fa-twitter nav-icon" href="#" target="_blank"></a></i>
+          </li>
+        </ul>
+      </nav>-->
+  <!-- Copyright -->
+  <div class="footer-copyright col-sm-4">© 2020 Copyright:
+    <a href="https://github.com/alonsomacarena/" target="_blank"> Macarena Alonso</a>
+  </div>
+</footer>
 
   </div>
 
