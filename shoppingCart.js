@@ -3,6 +3,7 @@
 let order=[]
 var total=0;
 var days ="";
+var impuestoPais = 1.02;
 //sin parametro products en funcion me decia products is not defined
 function addOrder(products, index) {
 	order.push(products[index]);
@@ -10,37 +11,52 @@ function addOrder(products, index) {
 	console.log(order);
 	renderCart();
 };
+//funcion para renderizar los dias de los tours
+function renderDays(days,daysDisplay ){
+	daysDisplay=$(".days-confirm");
+	daysDisplay.html(" " + days);
+};
+//funcion para calcular el total de dias que tendra tours
+function calculateDays(products){
+	days="";
+	order.forEach(function(product){
+		days = days + " " + product.day;
+	});
+	renderDays(days,".days-confirm" )
+};
 //funcion para renderizar el precio
 function renderPrice(total,priceDisplay){
 	priceDisplay= $(".price-display");
 	priceDisplay.html("$" + " " + total);
 };
-
 //funcion para calcular el total
 function calculateTotal(products){
 	total=0;
 	order.forEach(function(product){
 		total = total + product.price;
 	});
-	//me pasa el precio del producto
-	console.log(total);
 	//llamo a la funcion para renderizar el precio
 	renderPrice(total,".price-display");
-};	
-/*//funcion para renderizar dias
-function renderDays(days, products){
-$(".days-confirm").html(days);
 };
-//funcion para calcular el total de dias
-function calculateDays(products){
-	var days ="";
-order.forEach(function(product){
- //llamo el dia de cada tour 	
- days = days + " " + product.day;
-});
-console.log(days);
-renderDays(days,".days-confirm" );
-}*/
+
+//funcion que filtra productos x su id
+function getById(id){
+order.filter((product)=> product.id === id);
+};
+//funcion para eliminar un producto individualmente-resta precio del total
+function deleteItem(id){
+//llamo a la funcion filtradora x id
+product= getById(id);
+order= (localStorage.getItem("order")=== null)?[]: JSON.parse(localStorage.getItem("order"));
+productIndex= order.findIndex((product)=> product.id === id);
+order.splice(productIndex,1);
+localStorage.setItem("order", JSON.stringify(order));
+//aca elimina de los totales el producto eliminado segun su id
+renderCart("id");
+calculateTotal();
+renderDays("id");
+calculateDays();
+};
 //funcion para mostrar la orden
 function renderCart(products) {
 	//vacia la orden para que se vayan agregando de a 1 y no que se sumen las listas 
@@ -53,7 +69,7 @@ function renderCart(products) {
 		<li class="list-cart" >
 		<div class="title-cart">
 		<h6>${product.title}</h6>
-		<a href="#" class="far fa-trash-alt trash-icon">
+		<a href="#" class="far fa-trash-alt trash-icon" onclick="deleteItem('${product.id}')">
 		</a>
 		</div>
         <div class="description-cart">${product.description}</div>
@@ -62,23 +78,8 @@ function renderCart(products) {
 		`);
 //llamo a la funcion que calcula el total sumando los precios
 calculateTotal();
-	
-//llamo a la funcion que calcula el total sumando los dias
-		//calculateDays();
-//voy a actualizar la cant con cada elemento que agrego	
-	});
-
-//boton para cancelar producto individual. 
-btnTrashIcon=$(".trash-icon");
-btnTrashIcon.click(function(){
-		event.preventDefault();
-		let indice = $(event.target).attr('id')
-		$(event.target).parent().parent().parent().remove()
-        order.splice(indice,1);
-		localStorage.setItem('order', JSON.stringify(order));
-		//no me resta el precio del elemento que elimino. sino otro
-		calculateTotal();
-		//calculateDays();
+//llamo a la funcion que calcula el total sumando los dias 
+calculateDays();
 	});
 //boton para cancelar compra-vaciar carrito y local storage
 	btnCancel=$("#btnCancel");
@@ -86,6 +87,7 @@ btnTrashIcon.click(function(){
 		order=[];
 		cartContainer.empty();
 		calculateTotal();
+		calculateDays();
 		horarioCheck.empty();
 		localStorage.clear();
 	});
@@ -101,6 +103,14 @@ $(document).ready(function() {
 		//no pude hacer que puedan elegir en cada tour. solo me deja elegir en 1
 		horario = $("input[name='horario']:checked");
 		$("#horario-confirm").html(`<h3>${horario.val()}</h3>`);
+		//hacer que el total al hacer checkout sume el impuesto
+		priceDisplay= $(".price-display");
+		//agrega un impuesto al total
+		totalConPais=total *impuestoPais;
+		priceDisplay.html("$" + " " + totalConPais.toFixed(0));
+		//muestra el texto que avisa que se le puso un impuesto al total
+		impuestoDisclaimer=$("#impuesto-disclaimer");
+		$("#impuesto-disclaimer").css("display","inline-block");
 	});
 	//abre el cart al hacer click en el icono cart
 	$cart_trigger.on('click', function(event) {

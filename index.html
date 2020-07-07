@@ -77,17 +77,16 @@
     <!--tours section-->
       <h2 class="sectionTitle" id="tours">Nuestros Tours</h2>
     <!--buscador-->
-      <section class="search-box col-sm-12 ">
-        <form id="form-search" class="col-sm-12">
-            <div class="search col-sm-10">
-                    <input type="text" id="search-box-input" value="" class="col-sm-9"/>
-                    <input id="search-button" type="button" value="Buscar" />
-                    <input id="cancel-button" type="button" value="Cancelar" />
-            </div>
+      <section class="search-box col-sm-12">
+        <form id="form-search" class="col-sm-11" style="display: none;">
+         <span class="search-title" >Encontra el Tour ideal para vos!</span>
+            <input type="text" id="search-box-input" value="" class="col-sm-7"/>
+                    <!--<input id="search-button" type="button" value="Buscar" />
+                    <input id="cancel-button" type="button" value="Cancelar" />-->
         </form>
     </section>
       <!--resultados busqueda-->
-      <section class="search-text-container col-sm-12">
+      <!--<section class="search-text-container col-sm-12" >
         <div id="search-resume" class="col-sm-10">
         <p class="search-text col-sm-8" >
           <span id="search-result-length"></span>
@@ -95,7 +94,7 @@
           <span id="search-key"></span>
         </p>
         </div>
-      </section>
+      </section>-->
 
       <div id="products-container" class="col-sm-12">
       <!-- Cards Tours que se cargan desde JS -->
@@ -119,6 +118,7 @@
           <h3 class="horario-container">Horario:<span id="horario-confirm"></span></h3>
           <h3 class="days-container">Dias:<span class="days-confirm"></span></h3>
           <h5 class="price-container">Total: <span class="price-display"></span></h5>
+          <p id="impuesto-disclaimer"  style="display: none;">(* total con impuesto del pais)</p>
           </div> <!-- cd-cart-total -->
           <a href="#0" class="checkout-btn" id="btnConfirm">Checkout</a>
           <a href="#0" class="cancel-btn" id="btnCancel">Cancelar</a>

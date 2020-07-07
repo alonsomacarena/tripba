@@ -2,7 +2,7 @@
 function renderProducts(products) {
 	products.forEach(function(product, index) {
 		productsContainer.append(`
-		<article class="tourCards col-sm-3" data-id="${product.id}" >
+		<article class="tourCards col-sm-3" >
 		  <h4 class="tourTitle">${product.title}</h4>
 		  <img src="${product.img}" class="imageTour">
           <p class="text-day-duration">EL TOUR TIENE UNA DURACION DE: <span class="duration">${product.duracion}</span></p>
@@ -18,7 +18,6 @@ function renderProducts(products) {
 		  </div>
 	  </article>
 		`);
-		console.log(product.id)
 	});
 	/*2) aca tengo los productos armados como innerHTML. */
 	/*estar atenta a donde lo coloco. Como lo estaba poniendo por fuera de la funcion no me funcionaba!! */
@@ -37,3 +36,4 @@ function renderProducts(products) {
 	}); /*hice un evento click a un boton para agregar los productos al carrito x su id */
 	/* 3)lo siguiente seria definir addOrder. pero lo hago arriba de esto.*/
 };
+

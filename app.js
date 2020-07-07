@@ -1,5 +1,3 @@
-//archivo con ajax y slide panel
-
 //variables para el slide in panel
 var $menu_navigation = $('#main-nav');
 var $cart_trigger = $('#cd-cart-trigger');
@@ -21,12 +19,16 @@ function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
 		$background_layer.addClass('is-visible');
 	}
 };
+//aparece buscador al hacer scroll
+searchBox=$(".search-box");
+searchBox.onscroll= appearSearch();
+function appearSearch(){
+	$("#form-search").fadeIn(200);
+};
 
 $(document).ready(function() {
-
 	//hacemos el selector que conecta una var con el id de un div en html
 	productsContainer = $("#products-container");
-	
 	//1) llamada json apenas se carga la pagina
 	$.ajax({
 			method: "GET",
@@ -45,9 +47,16 @@ $(document).ready(function() {
 			console.log("no funciona llamada ajax");
 		});
 
-
+	//funcion buscadora. busca directamente al escribir en el input
+	$("#search-box-input").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#products-container .tourCards").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+		});
+	});
+	  
 		//cerrar el carrito lateral al hacer click afuera
-	$shadow_layer.on('click', function() {
+	$shadow_layer.click(function() {
 		$shadow_layer.removeClass('is-visible');
 		if ($lateral_cart.hasClass('speed-in')) {
 			$lateral_cart.removeClass('speed-in').on(function() {
