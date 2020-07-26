@@ -1,0 +1,123 @@
+[
+    {
+        "id": "FO0194",
+        "title": "Tour Football",
+        "price": 98,
+        "img": "img/futbol.jpg",
+        "imgdetalle": "img/bombonera.jpg",
+        "description": "La Bombonera + Museo Boquense + El Monumental + Museo River Plate",
+        "duracion": "6HRS",
+        "horario":"10.00hrs - 16.00hrs",
+        "day":"MARTES",
+        "icon":"img/futbol.svg",
+        "details":"En este tour nos adentraremos en la historia del fútbol argentino recorriendo los dos estadios de fútbol más famosos del país, el del Boca Juniors, La Bombonera, y el del River Plate, el Monumental. Dentro del estadio visitaremos las localidades preferentes, el sector popular y los vestuarios locales."
+    },
+    {
+        "id": "RE4087",
+        "title": "Tour Recoleta",
+        "price": 82,
+        "img": "img/recoleta-cementerio.jpg",
+        "imgdetalle": "img/recoleta.jpg",
+        "description": "Cementerio de Recoleta + Avenida Alvear + Centro Cultural Recoleta ",
+        "duracion": "3HRS",
+        "day":"MARTES",
+        "horario":"17.30hrs - 20.30hrs",
+        "icon":"img/town-icon.svg",
+        "details":"Este circuito recorre el casco histórico del barrio de Recoleta, monumentos y esculturas. Podrás conocer el Centro Cultural Recoleta, la Iglesia del Pilar y el Cementerio de la Recoleta, como los lugares más destacados. Además haremos uno de los circuitos de compras más prestigiosos de Buenos Aires ubicado en la Avenida Alvear"
+    },
+    {
+        "id": "CA2286",
+        "title": "Tour La Boca",
+        "price": 95,
+        "img": "img/caminito.jpg",
+        "imgdetalle": "img/caminito-havanna.jpg",
+        "description": "Caminito + La Bombonera + Antiguo Pueto + Historia del Tango ",
+        "duracion": "3.5HRS",
+        "day":"MIERCOLES",
+        "horario":"11.30hrs - 15.00hrs",
+        "icon":"img/urban.svg",
+        "details":"En este circuito podrás conocer uno de los barrios emblemáticos de Buenos Aires. El antiguo puerto y los coloridos conventillos de Caminito al ritmo del tango y la pasión por Boca Juniors. Terminaremos el tour en las puertas del Estadio de La Bombonera, uno de los templos futbolísticos no solo de Argentina, sino del mundo entero."
+    },
+    {
+        "id": "NI4394",
+        "title": "Tour Barolo Night",
+        "price": 84,
+        "img": "img/barolo-night.jpg",
+        "imgdetalle": "img/barolo.jpg",
+        "description": "Palacio Barolo + Degustación Vinos + Espectaculo Danza o Música",
+        "duracion": "4HRS",
+        "horario":"19.00hrs - 23.00hrs",
+        "day":"MIERCOLES",
+        "icon":"img/wine-tasting.svg",
+        "details":"Vive una noche de lo más especial con este tour nocturno por el Palacio Barolo. Conocerás todo sobre este edificio y disfrutarás de un espectáculo de música o baile en directo. Disfrutaremos también de una degustación de vino y aperitivos mientras conversamos sobre la relación de este edificio con la literatura italiana."
+    },
+    {
+        "id": "CE1023",
+        "title": "Tour Classics",
+        "price": 72,
+        "img": "img/centro.jpg",
+        "imgdetalle": "img/construction.jpg",
+        "description": "Obelisco + Congreso de la Nación + Cabildo + Casa Rosada ",
+        "duracion": "3.5HRS",
+        "day":"JUEVES",
+        "horario":"11.00hrs - 14.30hrs",
+        "icon":"img/town.svg",
+        "details":"Este circuito recorre el corazón de la ciudad porteña, en el que esta escrita la historia de la capital de Argentina. Veremos construcciones estilo colonial, y entenderemos la voluntad de los líderes del siglo XIX por convertir la ciudad en una capital moderna y europea en Sudamérica. "
+    },
+    {
+        "id": "PM7730",
+        "title": "Tour Puerto Madero",
+        "price": 65,
+        "img": "img/puerto-madero.jpg",
+        "imgdetalle": "img/costanera.jpg",
+        "description": "Puente de la Mujer + Costanera Sur + Fragata Sarmiento",
+        "duracion": "2.5HRS",
+        "day":"JUEVES",
+        "horario":"15.30hrs - 18.00hrs",
+        "icon":"img/city-girl.svg",
+        "details":"Con este tour conoceremos Puerto Madero, uno de los barrios más modernos de Buenos Aires. El barrio más joven de Buenos Aires revelará sus misterios y las historias del antiguo puerto y los rascacielos de lujo. Descubriremos sus icónicos barcos y los lugares más emblemáticos de la zona."
+    },
+    {
+        "id": "PA3896",
+        "title": "Tour Palermo",
+        "price": 76,
+        "img": "img/palermo-bosques.jpg",
+        "imgdetalle": "img/planetario.jpg",
+        "description": "Jardin Japones + Jardin Botánico + Rosedal + Planetario",
+        "duracion": "3HRS",
+        "day":"VIERNES",
+        "horario":"14.00hrs - 17.00hrs",
+        "icon":"img/walking-outside.svg",
+        "details":"El barrio Palermo es uno de los más extensos y bonitos de Buenos Aires. Según vayamos caminando, iremos comprobando la belleza que le da al barrio porteño las avenidas arboladas y las elegantes viviendas. Su excepcional colección de jardines lo convierte en un lugar ideal para aquellos que les gusta caminar y realizar actividades al aire libre. "
+    },
+    {
+        "id": "TI9773",
+        "title": "Tour Delta Tigre",
+        "price": 90,
+        "img": "img/tigre.jpg",
+        "imgdetalle": "img/delta.jpg",
+        "description": "San Isidro + Puerto de Frutas + Catamarán por los Rios del Delta",
+        "duracion": "5HRS",
+        "horario":"10.30hrs - 15.30hrs",
+        "day":"SABADO",
+        "icon":"img/park.svg",
+        "details":"Nuestra excursión a Tigre permite conocer esta famosa región del delta para disfrutar de su belleza natural y del estilo de vida original de los lugareños. Nuestro paseo a Tigre se compone de una visita al norte del Gran Buenos Aires para visitar en primer lugar el centro de San Isidro llegando luego a la Ciudad de Tigre en donde embarcaremos a un catamarán para hacer un paseo por los ríos del Delta."
+    },
+    {
+        "id": "ST1055",
+        "title": "Tour San Telmo",
+        "price": 60,
+        "img": "img/cafe-dorrego.jpg",
+        "imgdetalle": "img/casa-minima.jpg",
+        "description": "Mercado de San Telmo + Casa Mínima + Paseo de la Historieta",
+        "duracion": "3HRS",
+        "horario":"11.00hrs - 14.00hrs",
+        "day":"DOMINGO",
+        "icon":"img/walking-city.svg",
+        "details":"Los domingos en Buenos Aires la gente tiene una cita con la Feria de San Telmo, un lugar único donde encontrarás todo tipo de curiosidades. Únete a nuestro Tour de San Telmo y descubre el barrio más pequeño, antiguo y tradicional de la capital argentina, uno que añeja calles estrechas y adoquinadas, poblado por casas señoriales del siglo XIX."
+    }
+]
+
+
+
+
